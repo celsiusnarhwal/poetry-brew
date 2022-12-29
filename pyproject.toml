@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "poetry-brew"
+version = "1.0.0"
+description = "Generate Homebrew formulae for Poetry projects"
+authors = ["celsius narhwal <hello@celsiusnarhwal.dev>"]
+readme = "README.md"
+homepage = "https://github.com/celsiusnarhwal/poetry-brew"
+repository = "https://github.com/celsiusnarhwal/poetry-brew"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jinja2 = "^3.1.2"
+poetry = "^1.2"
+pydantic = "^1.10.3"
+requests = "^2.28.1"
+
+[tool.poetry.plugins."poetry.application.plugin"]
+brew = "poetry_brew.plugin:PoetryBrewPlugin"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
