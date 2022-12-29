@@ -1,5 +1,10 @@
 # poetry-brew
 
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/poetry-brew?logo=python&logoColor=white&style=for-the-badge)](https://pypi.org/project/poetry-brew)
+[![PyPI](https://img.shields.io/pypi/v/poetry-brew?logo=pypi&color=green&logoColor=white&style=for-the-badge)](https://pypi.org/project/poetry-brew)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/celsiusnarhwal/poetry-brew?logo=github&color=orange&logoColor=white&style=for-the-badge)](https://github.com/celsiusnarhwal/poetry-brew/releases)
+[![PyPI - License](https://img.shields.io/pypi/l/poetry-brew?color=03cb98&style=for-the-badge)](https://github.com/celsiusnarhwal/poetry-brew/blob/main/LICENSE)
+
 poetry-brew is a [Poetry](https://python-poetry.org/) plugin that generates Homebrew formulae for Poetry projects.
 
 ## Installation

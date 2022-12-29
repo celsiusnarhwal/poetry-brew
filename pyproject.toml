@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "poetry-brew"
-version = "1.0.0"
+version = "1.0.1"
 description = "Generate Homebrew formulae for Poetry projects"
 authors = ["celsius narhwal <hello@celsiusnarhwal.dev>"]
 readme = "README.md"
+license = "MIT"
 homepage = "https://github.com/celsiusnarhwal/poetry-brew"
 repository = "https://github.com/celsiusnarhwal/poetry-brew"
 
