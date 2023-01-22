@@ -48,4 +48,4 @@ dependencies = []
 
 ## License
 
-poetry-brew is licensed under the [MIT License](https://github.com/celsiusnarhwal/laureate/blob/HEAD/LICENSE.md).
+poetry-brew is licensed under the [MIT License](https://github.com/celsiusnarhwal/poetry-brew/blob/main/LICENSE.md).
