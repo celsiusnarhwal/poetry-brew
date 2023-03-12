@@ -2,6 +2,7 @@ from pathlib import Path
 
 import requests
 from cleo.io.inputs.option import Option
+from dict_deep import deep_get
 from poetry.console.application import Application
 from poetry.console.commands.command import Command
 from poetry.plugins import ApplicationPlugin
@@ -18,7 +19,7 @@ class PluginConfig(BaseModel):
     def __init__(self, poetry: Poetry):
         def get_config(config: dict | TOMLDocument) -> dict:
             return {k.replace("-", "_"): v for k, v in
-                    config.get("tool", {}).get("brew", {}).get("config", {}).items()}
+                    (deep_get(config, "tool.brew.config") or {}).items()}
 
         _config = get_config(poetry.file.read())
 
@@ -42,7 +43,7 @@ def generate(cmd: Command, output: Path, include: list, exclude: list, only: lis
     resources = []
 
     root_pkg = {
-        "name": tool_poetry["name"],
+        "name": tool_poetry["name"].title(),
         "version": tool_poetry["version"],
         "description": tool_poetry.get("description") or "",
         "homepage": tool_poetry.get("homepage") or "",
