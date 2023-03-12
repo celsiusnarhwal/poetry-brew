@@ -4,11 +4,18 @@ All notable changes to poetry-brew will be documented in this file. Breaking cha
 
 poetry-brew adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
+## <a name="1-0-3">[1.0.3] - 2023-03-12</a>
+
+### Fixed
+
+- Fixed a bug introduced in 1.0.2 where the name of a generated formula file would be cased differently than the 
+  package name in `pyproject.toml`.
+
 ## <a name="1-0-2">[1.0.2] - 2023-03-12</a>
 
 ### Fixed
 
-- Fixed a bug where the class name in a generated formulae would be incorrectly cased.
+- Fixed a bug where the class name in a generated formula would be incorrectly cased.
 
 ## <a name="1-0-1">[1.0.1] - 2022-12-29</a>
 
