@@ -43,7 +43,7 @@ def generate(cmd: Command, output: Path, include: list, exclude: list, only: lis
     resources = []
 
     root_pkg = {
-        "name": tool_poetry["name"].title(),
+        "name": tool_poetry["name"],
         "version": tool_poetry["version"],
         "description": tool_poetry.get("description") or "",
         "homepage": tool_poetry.get("homepage") or "",
