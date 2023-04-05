@@ -7,16 +7,16 @@ env = Environment(loader=BaseLoader(), trim_blocks=True)
 FORMULA_TEMPLATE = env.from_string(dedent("""\
     class {{ package.name|title }} < Formula
       include Language::Python::Virtualenv
-      
+
       desc "{{ package.description }}"
       homepage "{{ package.homepage }}"
       url "{{ package.url }}"
       sha256 "{{ package.checksum }}"
-      
-      depends_on "python3"
+
+      depends_on "python@3.11"
       {% for dependency in dependencies %}depends_on "{{ dependency }}"
       {% endfor %}
-      
+
     {% if resources %}
     {% for resource in resources %}
       resource "{{ resource.name }}" do
@@ -28,11 +28,9 @@ FORMULA_TEMPLATE = env.from_string(dedent("""\
     {% endif %}
 
       def install
-    {% if python == "python3" %}
-        virtualenv_create(libexec, "python3")
-    {% endif %}
         virtualenv_install_with_resources
       end
+
       test do
         false
       end
