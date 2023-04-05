@@ -12,6 +12,7 @@ FORMULA_TEMPLATE = env.from_string(dedent("""\
       homepage "{{ package.homepage }}"
       url "{{ package.url }}"
       sha256 "{{ package.checksum }}"
+      license "{{ package.license }}"
       
       depends_on "python3"
       {% for dependency in dependencies %}depends_on "{{ dependency }}"
