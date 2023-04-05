@@ -5,7 +5,7 @@ from jinja2 import Environment, BaseLoader
 env = Environment(loader=BaseLoader(), trim_blocks=True)
 
 FORMULA_TEMPLATE = env.from_string(dedent("""\
-    class {{ package.name|title }} < Formula
+    class {{ package.name|title|replace("-", "") }} < Formula
       include Language::Python::Virtualenv
       
       desc "{{ package.description }}"
